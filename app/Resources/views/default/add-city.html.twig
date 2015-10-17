@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{form_start(form)}}
+    {{form_widget(form)}}
+    <input type="submit" value="Add Category">
+    {{form_end(form)}}
+    
+    <h3>Cities</h3>
+    {% for names in show %}
+        {{names.name}}
+        <br>
+    {% endfor %}
+{% endblock %}
